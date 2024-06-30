@@ -68,6 +68,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Characcter concealing settings required for Obsidian.nvim to work
+vim.opt.conceallevel = 1
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -143,7 +146,7 @@ require('lazy').setup({
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
-
+  --[[
   { -- #user_markdown_renderer
     'MeanderingProgrammer/markdown.nvim',
     name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
@@ -155,7 +158,7 @@ require('lazy').setup({
       require('render-markdown').setup {}
     end,
   },
-
+--]]
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
@@ -767,7 +770,7 @@ require('lazy').setup({
   },
 
   require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.indent_line',
+  --require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
