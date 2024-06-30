@@ -1,0 +1,1 @@
+../../../../dotfiles/neovim/.config/nvim/.github/ISSUE_TEMPLATE/bug_report.md
