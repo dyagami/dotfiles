@@ -23,7 +23,9 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="/var/lib/snapd/snap/bin:$HOME/.local/bin:$PATH"
+    PATH="$HOME/.local/bin:$PATH"
 fi
 #source /.aliases
-export OPENAI_API_KEY=sk-proj-fZKNjmHvQoykujDdjJx4T3BlbkFJ9ZJvEZKtjjcva8zYDXR0
+if [ -d "$HOME/init.d" ] ; then
+	. "$HOME/init.d/*"
+fi

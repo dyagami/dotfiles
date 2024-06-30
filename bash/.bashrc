@@ -112,9 +112,3 @@ if ! shopt -oq posix; then
   fi
 fi
 source ~/.aliases
-export PATH="$PATH:$HOME/scripts"
-export DRI_PRIME=pci-0000_01_00_0
-#export __VK_LAYER_NV_OPTIMUS=NBIDIA_only
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-eval "$(starship init bash)"
-export EDITOR="nvim"

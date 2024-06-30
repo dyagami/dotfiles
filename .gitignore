@@ -1,2 +1,4 @@
+.stfolder
+.stfolder/*
 ./**/*.git
 tmux/.tmux/plugins/*
