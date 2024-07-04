@@ -1,3 +1,6 @@
+.stversions*
+.stversions/*
+*sync-conflict*
 .stfolder
 .stfolder/*
 ./**/*.git
