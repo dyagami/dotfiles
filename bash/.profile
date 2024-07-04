@@ -25,7 +25,7 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-#source /.aliases
+#source $HOME/.aliases
 if [ -d "$HOME/init.d" ] ; then
 	. "$HOME/init.d/*"
 fi
