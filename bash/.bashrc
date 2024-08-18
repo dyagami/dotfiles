@@ -113,3 +113,4 @@ if ! shopt -oq posix; then
 fi
 source $HOME/.aliases
 eval "$( starship init bash )"
+PATH="$PATH:/$HOME/bin"

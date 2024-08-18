@@ -129,7 +129,7 @@ export XSECURELOCK_NO_COMPOSITE=1
 
 # --- user binds ----
 
-# volume controls
+# audio controls
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +2.5%
 XF86AudioLowerVolume
@@ -138,7 +138,10 @@ XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 XF86AudioPlay
 	playerctl play-pause
-
+XF86AudioNext
+	playerctl next
+XF86AudioPrev
+	playerctl previous
 
 # sreenshots
 super + Home
