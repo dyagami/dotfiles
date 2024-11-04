@@ -113,4 +113,10 @@ if ! shopt -oq posix; then
 fi
 source $HOME/.aliases
 eval "$( starship init bash )"
-PATH="$PATH:/$HOME/bin"
+# Add user homedir bin folder to PATH
+export PATH="$PATH:$HOME/bin"
+# Add Ruby gems to PATH
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+

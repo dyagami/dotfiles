@@ -13,8 +13,8 @@ super + r
 
 # make sxhkd and bspwm reload their configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd && bspc wm -r && polybar-msg cmd restart && wired -x && wired && pkill picom && nice -20 prime-run picom &
-
+	pkill -USR1 -x sxhkd && bspc wm -r && polybar-msg cmd restart && wired -x && wired && pkill openrgb && openrgb --startminimized &
+&& pkill picom && nice -20 run picom &
 #
 # bspwm hotkeys
 #
@@ -145,9 +145,9 @@ XF86AudioPrev
 
 # sreenshots
 super + Home
-	exec scrot -s $HOME/screenshots/$(date +'%s_screenshot.png')
+	exec scrot -s $HOME/Picutres/screenshots/$(date +'%s_screenshot.png')
 super + shift + Home
-	exec scrot -M 0 $HOME/screenshots/$(date +'%s_screenshot.png')
+	exec scrot -M 0 $HOME/Pictures/screenshots/$(date +'%s_screenshot.png')
 super + {o,p}
 	exec bsp-layout {previous,next}
 
@@ -158,3 +158,6 @@ super + v
 # killswitch
 super + ctrl + q
 	exec poweroff -h
+# session lock
+super + q
+	exec dm-tool lock
