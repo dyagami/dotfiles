@@ -1,0 +1,7 @@
+.stversions*
+.stversions/*
+*sync-conflict*
+.stfolder
+.stfolder/*
+./**/*.git
+tmux/.tmux/plugins/*

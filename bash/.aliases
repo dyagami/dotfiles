@@ -1,0 +1,13 @@
+alias la="ls -lah"
+alias backup="touch ./backup.tar & tar -czvf backup.tar.gz --exclude=backup.tar ."
+alias backuproot="touch ./backup.tar & tar -czvf backup.tar.gz --exclude=backup.tar --exclude=/dev --exclude=/dev --exclude=/smb --exclude=/mnt /"
+alias restore="tar -xvf ./backup.tar"
+alias ascii="ascii-image-converter -fcC"
+alias image="kitten icat $1"
+alias files="exec pcmanfm"
+alias update="sudo pacman -Syuu --noconfirm && sudo -u $(whoami) yay -Syuu --noconfirm"
+alias cryptvolu="sudo veracrypt --text --dismount"
+alias vnc="x11vnc -display :0 -nodamage &"
+alias x="xclip -selection clipboard"
+alias na="nmap -T4 -p-"
+alias dropcache='"su -u root -c "echo 3 > /proc/sys/vm/drop_caches"'
