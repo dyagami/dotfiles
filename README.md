@@ -1,11 +1,25 @@
-My dotfiles which I manage across different machines with stow. If you want to use them, just place the pulled repo anywhere, get into 'dotfiles' folder and use 'stow --adopt PROGRAM' to make the dotfiles symlink to their proper places where programs will recognize them. The neovim configuration is based on Neovim Kickstart project and edited to my liking, large respect for the kickstart.nvim project for creating this great skeleton configuration.
+My dotfiles which I manage across different machines with stow. If you want to use them, just place the pulled repo anywhere, get into 'dotfiles' folder and use 'stow --adopt PROGRAM' to make the dotfiles symlink to their proper places where programs will recognize them. The neovim configuration is based on Neovim Kickstart project and edited to my liking, large respect for the kickstart.nvim project for creating this great skeleton configuration. There are multiple configurations I was basing my own on, which have their original authorship in their respective configuration files. Please note that the .bashrc contains 'source $HOME/.aliases_private' line and that file is not included in the repo, since it contains aliases with sensitive information that I would not like to share. Consider deleting this line or creating your own .aliases_private file.
 
-See below for a quick overview of how this configuration looks like on my Arch machine. Please keep in mind that you will need to install corresponding packages and dependencies for these to work for you. Feel free to cherry-pick what you find interesting and play around with these configs to make them your own! What you see on the screenshot are: kitty as terminal emulator, rofi as dlauncher, neovim as text editor, wired as notification daemon, polybar as status bar, ftlabs-picom-git as a compositor, bspwm as a tiling window manager, starship as shell prompt configuration, CaskaydiaCove Nerd Font Mono font configured in Kitty, Agave Nerd Font Propo Regular and IPAPMincho Regular as additional fonts for Polybar. You will have to download the fonts for the configuration to work or change the fonts in the respective configurations to your liking. All of the used packages are available in AUR.
 
-Please note that the .bashrc contains 'source $HOME/.aliases_private' line and that file is not included in the repo, since it contains aliases with sensitive information that I would not like to share. Consider deleting this line or creating your own .aliases_private file.
+<h1>X11 setup</h1>
 
 ![image screenshot1](./img/screenshot1.png)
 
+Dependencies:
+
+```kitty rofi neovim wired polybar ftlabs-picom-git bspwwm starship 'CaskaydiaCove Nerd Font' 'Agave Nerd Font' 'IPAPMincho Font' 'xorg drivers for your GPU as well as xorg-server'```
+
 
 https://github.com/user-attachments/assets/f1019dba-c9ac-4abf-99db-7b1efe6ca424
+
+
+<h1>Wayland setup</h1>
+
+![image screenshot2](./img/screenshot2.png)
+ 
+Dependencies
+```wl-clipboard wl-clip-persist cliphist niri wayland qt5-wayland qt6-wayland swaync rofi-wayland waybar lm-sensors kitty yazi eza neovim 'Caskaydia Code Nerd Font' 'Terminess Nerd Font' 'IPAP Mincho font'```
+
+
+https://github.com/user-attachments/assets/81f7e865-cd6f-4241-a626-3047aa4fce6f
 
