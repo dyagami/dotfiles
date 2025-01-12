@@ -1,4 +1,6 @@
-alias la="ls -lah"
+alias la="eza -lah --icons=always"
+alias ls="eza --icons=always"
+alias tree="eza --icons=always -T"
 alias backup="touch ./backup.tar & tar -czvf backup.tar.gz --exclude=backup.tar ."
 alias backuproot="touch ./backup.tar & tar -czvf backup.tar.gz --exclude=backup.tar --exclude=/dev --exclude=/dev --exclude=/smb --exclude=/mnt /"
 alias restore="tar -xvf ./backup.tar"

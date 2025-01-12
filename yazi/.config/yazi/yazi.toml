@@ -1,0 +1,10 @@
+[manager]
+sort_by = "alphabetical"
+sort_sensitive = false
+sort_dir_first = true
+linemode = "permissions"
+show_hidden = true
+[preview]
+wrap = "yes"
+tab_size = 4
+

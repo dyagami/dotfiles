@@ -8,7 +8,9 @@ super + Return
 
 # program launcher
 super + r
-	rofi -show drun
+#	rofi -show drun
+	. /home/lain/.config/rofi/launchers/type-6/launcher.sh
+
 	
 
 # make sxhkd and bspwm reload their configuration files:
@@ -144,9 +146,10 @@ XF86AudioPrev
 
 # sreenshots
 super + Home
-	exec scrot -s $HOME/Picutres/screenshots/$(date +'%s_screenshot.png')
-super + shift + Home
-	exec scrot -M 0 $HOME/Pictures/screenshots/$(date +'%s_screenshot.png')
+	maim -sm 10 -o $HOME/Pictures/screenshots/$(date +'%s_screenshot.jpg'); \
+	notify-send 'Maim' 'screenshot taken'; \
+	nautilus --new-window $HOME/Pictures/screenshots
+	#exec screenshotarea
 super + {o,p}
 	exec bsp-layout {previous,next}
 
@@ -159,4 +162,8 @@ super + ctrl + q
 	exec poweroff -h
 # session lock
 super + q
-	exec dm-tool lock
+	. /home/lain/.config/rofi/powermenu/type-4/powermenu.sh
+# Show clipmenu
+alt + v
+    CM_LAUNCHER=rofi clipmenu
+
