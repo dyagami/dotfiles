@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/lain/Pictures/wallpapers/anime-girl-with-cap-smoking-4k-wallpaper-uhdpaper.com-712@0@j.jpg"
+let background = "#0b0c0c"
+let foreground = "#c2c2c2"
+let cursor     = "#c2c2c2"
+
+" Colors
+let color0  = "#0b0c0c"
+let color1  = "#5A3C85"
+let color2  = "#72648E"
+let color3  = "#8F7389"
+let color4  = "#9571A4"
+let color5  = "#9F7CC3"
+let color6  = "#80899E"
+let color7  = "#c2c2c2"
+let color8  = "#566a6a"
+let color9  = "#5A3C85"
+let color10 = "#72648E"
+let color11 = "#8F7389"
+let color12 = "#9571A4"
+let color13 = "#9F7CC3"
+let color14 = "#80899E"
+let color15 = "#c2c2c2"

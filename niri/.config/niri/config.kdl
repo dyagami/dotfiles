@@ -134,7 +134,7 @@ output "DP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=1921 y=0
+    position x=1920 y=0
 }
 output "DP-1" {
     // Uncomment this line to disable this output.
@@ -164,7 +164,7 @@ output "DP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=4481 y=425
+    position x=4480 y=430
     // x 3360 y 390
 }
 
@@ -196,7 +196,7 @@ output "HDMI-A-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=0 y=425
+    position x=0 y=430
     // x 3360 y 390
 }
 
@@ -321,6 +321,7 @@ spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "wl-clip-persist" "--clipboard" "both"
 spawn-at-startup "swaync" "-s" "/home/lain/.config/swaync/style.css" "-c" "/home/lain/.config/swaync/config.json"
+spawn-at-startup "bash" "-c" "/home/lain/bin/monitors"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.

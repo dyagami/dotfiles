@@ -1,0 +1,28 @@
+{
+    "checksum": "0916c560410c47d82684a18a77306485",
+    "wallpaper": "/home/lain/Pictures/wallpapers/anime-girl-with-cap-smoking-4k-wallpaper-uhdpaper.com-712@0@j.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0b0c0c",
+        "foreground": "#c2c2c2",
+        "cursor": "#c2c2c2"
+    },
+    "colors": {
+        "color0": "#0b0c0c",
+        "color1": "#5A3C85",
+        "color2": "#72648E",
+        "color3": "#8F7389",
+        "color4": "#9571A4",
+        "color5": "#9F7CC3",
+        "color6": "#80899E",
+        "color7": "#c2c2c2",
+        "color8": "#566a6a",
+        "color9": "#5A3C85",
+        "color10": "#72648E",
+        "color11": "#8F7389",
+        "color12": "#9571A4",
+        "color13": "#9F7CC3",
+        "color14": "#80899E",
+        "color15": "#c2c2c2"
+    }
+}
