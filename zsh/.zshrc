@@ -37,6 +37,12 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt beep extendedglob globdots
 unsetopt autocd nomatch notify
+
+# Plugins
+source "$HOME/.zsh_plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+source "$HOME/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# Vi keybindings
 bindkey -v
 # End of lines configured by zsh-newuser-install
 eval "$(starship init zsh)"
@@ -48,6 +54,31 @@ export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
+export GEM_HOME="$HOME/gems"
 export MANPAGER='nvim +Man!'
 export EDITOR='nvim'
 cat ~/.cache/wal/sequences
+# Golang environment variables
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+
+# Update PATH to include GOPATH and GOROOT binaries
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
+
+# Loop through all files in the ~/.config/fabric/patterns directory
+for pattern_file in $HOME/.config/fabric/patterns/*; do
+    # Get the base name of the file (i.e., remove the directory path)
+    pattern_name=$(basename "$pattern_file")
+
+    # Create an alias in the form: alias pattern_name="fabric --pattern pattern_name"
+    alias_command="alias $pattern_name='fabric --pattern $pattern_name'"
+
+    # Evaluate the alias command to add it to the current shell
+    eval "$alias_command"
+done
+
+yt() {
+    local video_link="$1"
+    fabric -y "$video_link" --transcript
+}
+export OLLAMA_HOST="http://localhost:11434"

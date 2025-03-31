@@ -322,6 +322,8 @@ spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "wl-clip-persist" "--clipboard" "both"
 spawn-at-startup "swaync" "-s" "/home/lain/.config/swaync/style.css" "-c" "/home/lain/.config/swaync/config.json"
 spawn-at-startup "bash" "-c" "/home/lain/bin/monitors"
+spawn-at-startup "bash" "-c" "/home/lain/bin/hwmon_path"
+
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -401,6 +403,13 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
+
+window-rule {
+    match is-active=false
+
+    opacity 0.95
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -458,8 +467,8 @@ binds {
     XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
-
     Mod+W { close-window; }
+    Mod+S { toggle-window-floating; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -640,7 +649,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Mod+X { spawn "niri" "msg" "action" "screenshot"; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 

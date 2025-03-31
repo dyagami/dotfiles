@@ -143,7 +143,8 @@
         },
         "temperature": {
             "critical-threshold": 85,
-	    "hwmon-path" : "/sys/devices/platform/PNP0C14:02/wmi_bus/wmi_bus-PNP0C14:02/466747A0-70EC-11DE-8A39-0800200C9A66/hwmon/hwmon4/temp1_input",
+	    "hwmon-path-abs" : "/sys/devices/platform/PNP0C14:02/wmi_bus/wmi_bus-PNP0C14:02/466747A0-70EC-11DE-8A39-0800200C9A66/hwmon",
+	    "input-filename" : "temp2_input",
             "format": " {icon} ",
 	    	    "format-icons": [
 	     	"<span color='#69ff94'>▁</span>", // green

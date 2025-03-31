@@ -1,1 +1,0 @@
-../../../dotfiles/neovim/.config/nvim/.github/pull_request_template.md

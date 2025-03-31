@@ -1,5 +1,0 @@
-return {
-  {
-    'mateuszwieloch/automkdir.nvim',
-  },
-}
