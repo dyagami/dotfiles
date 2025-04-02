@@ -6,3 +6,4 @@ local opt = vim.opt
 opt.autowrite = false
 opt.shiftwidth = 4
 opt.tabstop = 4
+opt.scrolloff = 999

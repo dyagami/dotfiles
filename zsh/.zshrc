@@ -82,3 +82,10 @@ yt() {
     fabric -y "$video_link" --transcript
 }
 export OLLAMA_HOST="http://localhost:11434"
+
+# bun completions
+[ -s "/home/lain/.bun/_bun" ] && source "/home/lain/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
