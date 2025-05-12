@@ -89,3 +89,9 @@ export OLLAMA_HOST="http://localhost:11434"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/lain/.dart-cli-completion/zsh-config.zsh ]] && . /home/lain/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

@@ -16,3 +16,4 @@ alias dropcache='"su -u root -c "echo 3 > /proc/sys/vm/drop_caches"'
 alias cp="cp -v"
 alias qmv="qmv --format=do"
 alias neofetch="neofetch --package_managers off --speed-type max --gtk2 off --gtk3 off --shell_version on --backend kitty"
+alias mpv="mpv --audio-channels=7.0"
