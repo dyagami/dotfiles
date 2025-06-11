@@ -197,7 +197,7 @@ output "HDMI-A-1" {
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
     position x=0 y=430
-    // x 3360 y 390
+    // x //3360 y 390
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -316,15 +316,17 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
-spawn-at-startup "/home/lain/.azotebg"
+//spawn-at-startup "/home/lain/.azotebg"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "wl-clip-persist" "--clipboard" "both"
 spawn-at-startup "swaync" "-s" "/home/lain/.config/swaync/style.css" "-c" "/home/lain/.config/swaync/config.json"
 spawn-at-startup "bash" "-c" "/home/lain/bin/monitors"
 spawn-at-startup "bash" "-c" "/home/lain/bin/hwmon_path"
-
-
+spawn-at-startup "qpwgraph" "-a" "-m" "/home/lain/qpwgraph/null_sink_carla_easyeffects.qpwgraph"
+spawn-at-startup "carla" "-n" "/home/lain/carla/music_easyeffects_carla.carxp"
+spawn-at-startup "waypaper-engine" "daemon"
+spawn-at-startup "swww" "restore"
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
@@ -407,7 +409,7 @@ window-rule {
 window-rule {
     match is-active=false
 
-    opacity 0.95
+    opacity 0.86
 }
 
 // Example: block out two password managers from screen capture.
@@ -430,6 +432,18 @@ window-rule {
 }
 window-rule {
     match app-id="firefox"
+    default-column-width { proportion 0.99; }
+}
+window-rule {
+    match app-id="chromium"
+    default-column-width { proportion 0.99; }
+}
+window-rule {
+    match app-id="orca-slicer"
+    default-column-width { proportion 0.99; }
+}
+window-rule {
+    match app-id="qpwgraph"
     default-column-width { proportion 0.99; }
 }
 binds {
@@ -461,9 +475,9 @@ binds {
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+2%"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-2%"; }
-    XF86AudioMute        allow-when-locked=true { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_SINK@" "0.01+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_SINK@" "0.01-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_SINK@" "toggle"; }
     XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
