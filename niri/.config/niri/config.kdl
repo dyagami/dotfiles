@@ -326,7 +326,6 @@ spawn-at-startup "bash" "-c" "/home/lain/bin/hwmon_path"
 spawn-at-startup "qpwgraph" "-a" "-m" "/home/lain/qpwgraph/null_sink_carla_easyeffects.qpwgraph"
 spawn-at-startup "carla" "-n" "/home/lain/carla/music_easyeffects_carla.carxp"
 spawn-at-startup "waypaper-engine" "daemon"
-spawn-at-startup "swww" "restore"
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
@@ -675,3 +674,4 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+spawn-at-startup "swww" "restore"

@@ -54,12 +54,12 @@ export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
-export GEM_HOME="$HOME/gems"
+#export GEM_HOME="$HOME/gems"
 export MANPAGER='nvim +Man!'
 export EDITOR='nvim'
 cat ~/.cache/wal/sequences
 # Golang environment variables
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 
 # Update PATH to include GOPATH and GOROOT binaries
@@ -89,9 +89,12 @@ export OLLAMA_HOST="http://localhost:11434"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
+#export PATH="$GEM_HOME/bin:$PATH"
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/lain/.dart-cli-completion/zsh-config.zsh ]] && . /home/lain/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
